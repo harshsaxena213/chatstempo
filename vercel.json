@@ -1,0 +1,26 @@
+{
+  "routes": [
+    {
+      "src": "^/thirsty_crows_6869158326463863/(videos|photos|gifs)/.*$",
+      "headers": {
+        "Cache-Control": "no-store"
+      },
+      "continue": true
+    },
+    {
+      "src": "^/thirsty_crows_6869158326463863/(videos|photos|gifs)/.*$",
+      "has": [
+        {
+          "type": "header",
+          "key": "referer",
+          "value": "https://chats-seven-gold.vercel.app"
+        }
+      ],
+      "continue": true
+    },
+    {
+      "src": "^/thirsty_crows_6869158326463863/(videos|photos|gifs)/.*$",
+      "status": 403
+    }
+  ]
+}
